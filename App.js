@@ -8,6 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+
+
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
 
@@ -130,6 +132,13 @@ export default class App extends React.Component {
                onPress={()=> this.loginWithFacebook()}
               >
               <Text style={{color: 'white'}}>Login with Facebook</Text>
+              </Button>
+
+              <Button style={{marginTop: 30}}
+               full rounded primary
+               //onPress={()=> this.loginWithFacebook()}
+              >
+              <Text style={{color: 'white'}}>Go to list</Text>
               </Button>
 
              </Form>
