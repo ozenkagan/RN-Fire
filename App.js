@@ -8,6 +8,9 @@ import {
   StatusBar,
 } from 'react-native';
 
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
 
