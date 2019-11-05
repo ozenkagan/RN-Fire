@@ -8,11 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
-
-
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_RfyI4qg9kaV7wZT6FyCsXQOCDEmPbcg",
