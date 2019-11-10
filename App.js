@@ -134,6 +134,7 @@ export default class App extends React.Component {
               <Text style={{color: 'white'}}>Login with Facebook</Text>
               </Button>
 
+
               <Button style={{marginTop: 30}}
                full rounded primary
                //onPress={()=> this.loginWithFacebook()}
