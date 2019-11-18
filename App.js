@@ -8,8 +8,16 @@ import {
   StatusBar,
 } from 'react-native';
 
+import List from './src/List';
+
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+
+const MainNavigator = createStackNavigator({
+  List: {screen: List}
+});
+
+const App = createAppContainer(MainNavigator);
 
 import * as firebase from 'firebase';
 import * as Facebook from 'expo-facebook';
@@ -29,6 +37,10 @@ if (!firebase.apps.length) {
 import { Container, Content, Header, Form, Input, Item, Button, Label} from 'native-base';
 
 export default class App extends React.Component {
+
+  static navigationOptions = {
+      title: 'Welcome',
+    };
 
   constructor(props){
     super(props)
@@ -90,6 +102,7 @@ export default class App extends React.Component {
   }
 
   render() {
+    const {navigate} = this.props.navigation;
   return (
             <Container styles={styles.container}>
              <Form>
@@ -134,12 +147,9 @@ export default class App extends React.Component {
               <Text style={{color: 'white'}}>Login with Facebook</Text>
               </Button>
 
-
-
- 
               <Button style={{marginTop: 30}}
                full rounded primary
-               //onPress={()=> this.loginWithFacebook()}
+               onPress={() => navigate('List')}
               >
               <Text style={{color: 'white'}}>Go to list</Text>
               </Button>
