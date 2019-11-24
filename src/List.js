@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-
+import ListScreen from './src/List';
 
 export default class List extends React.Component {
 
@@ -16,7 +16,7 @@ export default class List extends React.Component {
   return (
         <View>
               <Text>List</Text>
-        </View>      
+        </View>
   );
  }
 }
